@@ -1,0 +1,41 @@
+<html>
+<header>
+<title>Multimedia database system</title>
+</header>
+<body>
+<h1>MMDB and IR</h1>
+
+<hr>
+
+File upload:
+<form enctype="multipart/form-data" 
+                     action="/save_file" method="post">
+   <p>File: <input type="file" name="filename" /></p>
+   <p><input type="submit" value="Upload" /></p>
+</form>
+<hr>
+<form method="post" action="/search_file">
+   <p> Search: <input type="text" name="search_box" /><br></p>
+   <p><input type="submit" name='search' value="search"/></p>
+</form>
+<hr>
+
+Insert Document
+<form enctype="multipart/form-data" method="post" action="/insert_doc" >
+	<p>ID: <input type="text" name="id" /><br></p>
+	<p>Name:<input type="text" name="name" /><br></p>
+	<p>Location:<input type="text" name="location" /><br></p>
+	<p>No of copies:<input type="text" name="copies" /><br></p>
+	<p>Language:<input type="text" name="language" /><br></p>
+	<p>Edition:<input type="text" name="edition" /><br></p>
+   <p> File: <input type="file" name="filename" /><br></p>
+   <p><input type="submit" name='insertDoc' value="insertDoc"/></p>
+</form>
+<hr>
+Search Document
+<form enctype="multipart/form-data" method="post" action="/search_doc" >
+<p>Name:<input type="text" name="name" /><br></p>
+<p><input type="submit" name='insertDoc' value="search"/></p>
+</form>
+</body>
+</html>
